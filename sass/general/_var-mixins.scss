@@ -1,0 +1,34 @@
+// font
+$font: 'whatever';
+
+// colors
+$white: #ffffff;
+
+// mixins & funcs
+$browser-context: 16; // Default
+// for changing pixels to em
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+// for prefixes
+@mixin prefixes($key, $value) {
+    -webkit-#{$key}: $value;
+       -moz-#{$key}: $value;
+        -ms-#{$key}: $value;
+         -o-#{$key}: $value;
+            #{$key}: $value;
+}
+
+@mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
+  box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
+}
+
+// for prefixes
+@mixin prefixes($key, $value) {
+    -webkit-#{$key}: $value;
+       -moz-#{$key}: $value;
+        -ms-#{$key}: $value;
+         -o-#{$key}: $value;
+            #{$key}: $value;
+}

@@ -1,0 +1,10 @@
+html, body {
+    font-family: $font;
+    background-color: $white;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @include media('<767px') {
+        background: red;
+    }
+}
