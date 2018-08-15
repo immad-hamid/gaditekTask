@@ -1,0 +1,13 @@
+#why-ivacy {
+    .section-header {
+        max-width: 745px;
+    }
+}
+
+#who-ivacy {
+    background-color: #f7f7f7;
+    h3 {
+        font-weight: 800;
+    }
+    @extend #why-ivacy;
+}

@@ -5,6 +5,38 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @include media('<767px') {
-        background: red;
+        background: inherit;
+    }
+}
+
+.sec-heading {
+    font-size: em(20);
+    font-weight: 300;
+    color: #000;
+}
+
+p {
+    font-size: em(14);
+    line-height: 22px;
+    color: #888888;
+    letter-spacing: 0.01em;
+}
+
+.app-btn {
+    background-color: #f27624;
+    display: inline-block;
+    border-radius: 26px;
+    font-size: 19px;
+    height: 41px;
+    line-height: 41px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include prefixes(transition, all ease 0.35s);
+    &:hover {
+        background-color: darken($color: #f27624, $amount: 5%);
+        text-decoration: none;
+        color: #fff;
+        @include prefixes(transition, all ease 0.35s);
     }
 }
